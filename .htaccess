@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /social-computer/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ([a-zA-Z]+)/([0-9]+)$ $1/index.php?id=$2 [NC,L]
+</IfModule>
